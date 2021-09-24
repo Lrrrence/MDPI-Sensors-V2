@@ -1,0 +1,481 @@
+%  LaTeX support: latex@mdpi.com 
+%  For support, please attach all files needed for compiling as well as the log file, and specify your operating system, LaTeX version, and LaTeX editor.
+
+%=================================================================
+\documentclass[sensors,article,submit,moreauthors,dvi2pdf]{Definitions/mdpi} 
+
+% For posting an early version of this manuscript as a preprint, you may use "preprints" as the journal and change "submit" to "accept". The document class line would be, e.g., \documentclass[preprints,article,accept,moreauthors,pdftex]{mdpi}. This is especially recommended for submission to arXiv, where line numbers should be removed before posting. For preprints.org, the editorial staff will make this change immediately prior to posting.
+
+%--------------------
+% Class Options:
+%--------------------
+%----------
+% submit
+%----------
+% The class option "submit" will be changed to "accept" by the Editorial Office when the paper is accepted. This will only make changes to the frontpage (e.g., the logo of the journal will get visible), the headings, and the copyright information. Also, line numbering will be removed. Journal info and pagination for accepted papers will also be assigned by the Editorial Office.
+
+%------------------
+% moreauthors
+%------------------
+% If there is only one author the class option oneauthor should be used. Otherwise use the class option moreauthors.
+
+%---------
+% pdftex
+%---------
+% The option pdftex is for use with pdfLaTeX. If eps figures are used, remove the option pdftex and use LaTeX and dvi2pdf.
+
+%=================================================================
+% MDPI internal commands
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2021}
+\copyrightyear{2020}
+%\externaleditor{Academic Editor: Firstname Lastname} % For journal Automation, please change Academic Editor to "Communicated by"
+\datereceived{} 
+\dateaccepted{} 
+\datepublished{} 
+\hreflink{https://doi.org/} % If needed use \linebreak
+%------------------------------------------------------------------
+% The following line should be uncommented if the LaTeX file is uploaded to arXiv.org
+%\pdfoutput=1
+
+%=================================================================
+% Add packages and commands here. The following packages are loaded in our class file: fontenc, inputenc, calc, indentfirst, fancyhdr, graphicx, epstopdf, lastpage, ifthen, lineno, float, amsmath, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, tabto, xcolor, soul, multirow, microtype, tikz, totcount, changepage, paracol, attrib, upgreek, cleveref, amsthm, hyphenat, natbib, hyperref, footmisc, url, geometry, newfloat, caption
+\usepackage{bookmark}
+\usepackage{tabulary}
+\usepackage{siunitx}
+%=================================================================
+%% Please use the following mathematics environments: Theorem, Lemma, Corollary, Proposition, Characterization, Property, Problem, Example, ExamplesandDefinitions, Hypothesis, Remark, Definition, Notation, Assumption
+%% For proofs, please use the proof environment (the amsthm package is loaded by the MDPI class).
+
+%=================================================================
+% Full title of the paper (Capitalized)
+\Title{Modelling and validation of a guided acoustic wave temperature monitoring system}
+
+% MDPI internal command: Title for citation in the left column
+\TitleCitation{Modelling and validation of a guided acoustic wave temperature monitoring system}
+
+% Author Orchid ID: enter ID or remove command
+\newcommand{\orcidauthorA}{0000-0002-0324-6642} % Add \orcidA{} behind the author's name
+\newcommand{\orcidauthorB}{0000-0002-5600-4671} % Add \orcidB{} behind the author's name
+\newcommand{\orcidauthorC}{0000-0003-4122-2219} % Add \orcidC{} behind the author's name
+\newcommand{\orcidauthorD}{0000-0001-6448-9448} % Add \orcidD{} behind the author's name
+
+% Authors, for the paper (add full first names)
+\Author{Lawrence Yule $^{1*}$\orcidA{}, Bahareh Zaghari $^{2}$\orcidB{}, Nicholas Harris $^{3}$\orcidC{}, and Martyn Hill $^{4}$\orcidD{}}
+
+% MDPI internal command: Authors, for metadata in PDF
+\AuthorNames{Lawrence Yule, Bahareh Zaghari, Nicholas Harris, and Martyn Hill}
+
+% MDPI internal command: Authors, for citation in the left column
+\AuthorCitation{Yule, L.; Zaghari, B.; Harris, N.; Hill, M}
+% If this is a Chicago style journal: Lastname, Firstname, Firstname Lastname, and Firstname Lastname.
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address{%
+$^{1}$ \quad University of Southampton, Southampton, UK, SO17 1BJ; L.Yule@soton.ac.uk\\
+$^{2}$ \quad School of Aerospace, Transport and Manufacturing, Cranfield University, Bedford, UK MK43 0AL; Bahareh.Zaghari@cranfield.ac.uk\\
+$^{3}$ \quad University of Southampton, Southampton, UK, SO17 1BJ; nrh@ecs.soton.ac.uk\\
+$^{4}$ \quad University of Southampton, Southampton, UK, SO17 1BJ; M.Hill@soton.ac.uk}
+
+% Contact information of the corresponding author
+\corres{Correspondence: L.Yule@soton.ac.uk}
+
+% Current address and/or shared authorship
+%\firstnote{Current address: Affiliation 3} 
+%\secondnote{These authors contributed equally to this work.}
+% The commands \thirdnote{} till \eighthnote{} are available for further notes
+
+%\simplesumm{} % Simple summary
+
+%\conference{} % An extended version of a conference paper
+
+% Abstract (Do not insert blank lines, i.e. \\) 
+\abstract{The computer modelling of condition monitoring sensors can aide in their development, improving their performance, and allow for the analysis of sensor impact on component operation. This article details the development of a COMSOL model for a guided wave based temperature monitoring system, with a view to using the technology for the temperature monitoring of nozzle guide vanes, found in the hot section of aero-engines. The model is based on an experimental test setup that acts as a method of validation for the model. Piezoelectric wedge transducers are used to excite the $S_0$ Lamb wave mode in an aluminium plate, which is temperature controlled using a hot plate. Time of flight measurements are carried out in MATLAB and used to calculate group velocity. Results are compared to theoretical wave velocities extracted from dispersion curves. The assembly and validation of such a model can aide in the future development of guided wave based sensor systems, and the methods provided can act as a guide for building similar COMSOL models. Results show that the model is in good agreement with the experimental equivalent, which is also in line with theoretical predictions.}
+
+% Keywords
+\keyword{Condition monitoring; guided waves; COMSOL, wedge transducer, nozzle guide vane} 
+
+% The  PACS, MSC, and JEL may be left empty or commented out if not applicable
+%\PACS{J0101}
+%\MSC{}
+%\JEL{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Diversity
+%\LSID{\url{http://}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Applied Sciences:
+%\featuredapplication{Authors are encouraged to provide a concise description of the specific application or a potential application of the work. This section is not mandatory.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Data:
+%\dataset{DOI number or link to the deposited data set in cases where the data set is published or set to be published separately. If the data set is submitted and will be published as a supplement to this paper in the journal Data, this field will be filled by the editors of the journal. In this case, please make sure to submit the data set as a supplement when entering your manuscript into our manuscript editorial system.}
+
+%\datasetlicense{license under which the data set is made available (CC0, CC-BY, CC-BY-SA, CC-BY-NC, etc.)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Toxins
+%\keycontribution{The breakthroughs or highlights of the manuscript. Authors can write one or two sentences to describe the most important part of the paper.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Encyclopedia
+%\encyclopediadef{Instead of the abstract}
+%\entrylink{The Link to this entry published on the encyclopedia platform.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+Condition monitoring is vital in maintaining the health of many different forms of machines and components. The advent of small, robust sensors has allowed considerable monitoring to take place, but there is still scope to extend monitoring to harsher environments. The monitoring of components at high temperatures is of particular importance as operating components closer to their thermal limits can increase efficiency, which can reduce operational costs. Exposure to high temperatures increases the risk of failure, which makes health monitoring of these components vitally important. Additional high temperature sensors can feed into active control systems to ensure optimal operation of complex systems. During the design stage finite element models are often used to predict thermal stresses, but are difficult to verify experimentally. The development of new high temperature sensors can inform design decisions and improve the accuracy of models, which will lead to increased efficiency in the finalised component. The modelling of sensor systems as well as the components themselves can allow the impact of the sensors on component operation to be analysed.
+
+\subsection{Ultrasonic structural health monitoring}
+
+Ultrasound is of particular interest for SHM applications as it allows for small sensors, high precision, fast data rates, and can be utilised at frequencies much higher than environmental noise~\cite{Mitra2016}. Traditional ultrasonic NDE utilises A-scans, a measurement of signal amplitude against time, to detect cracks, defects etc. This can be extended to B~\cite{Fatemi1980}, C~\cite{Ruzek2006,Imielinska2004}, or phased-array~\cite{Komura2001} scans to build an image of damage in an area by moving the transducers around and carrying out multiple measurements. Rayleigh waves (otherwise known as ``Surface Acoustic Waves'' (SAWs)) can be excited at high frequencies (at wavelengths much smaller than material thickness) and are confined to the surface of a material, while Lamb waves (otherwise known as ``Guided Waves'') will propagate if excited at frequencies with wavelengths in the order of material thickness, as they interact with both the top and bottom boundaries of a material. Although Rayleigh waves can be used for structural health monitoring applications they produce large surface motions that are highly sensitive to any discontinuities or defects and are highly affected by surface coatings~\cite{Dransfeld1970}. Lamb waves are guided by the upper and lower boundaries of a material allowing for continuous wave propagation~\cite{Rose2014}. They can travel large distances with limited attenuation using constructive interference with surfaces/boundaries, which is already utilised for pipe~\cite{Zaghari2013} and rail inspection methods~\cite{Shi2019}. Guided waves have been proposed as a method of defect detection for aircraft~\cite{Wang2019}, installing transducers in large arrays to allow for guided wave tomography. 
+
+Unlike bulk acoustic waves Lamb waves are dispersive and multi-modal which makes their analysis complex, especially when their are other factors such as changing temperatures are involved. The lowest order modes, the fundamental antisymmetric mode $A_0$, and the fundamental symmetric mode $S_0$, are the most commonly used modes as they are relatively non-dispersive and comparatively easy to generate in comparison to the higher order modes ($A_1$, $S_1$, etc.). Lower order Lamb waves are used extensively for NDE and SHM applications and an overview of their uses for damage identification is provided by Su~\cite{Su2009a}. Lamb waves have both phase and group velocities, the phase velocity relating to the local speed with which phase of the wave changes, and a group velocity which describes the overall speed of energy transport through the propagating wave. Phase velocity is generally higher than the group velocity. Time of flight ($t_F$) measurements of Lamb waves give the group velocity, while special phase comparison techniques are needed to measure the phase velocity~\cite{Cheeke2000a}. 
+
+\subsection{Guided wave temperature monitoring}
+
+Despite the numerous uses of guided waves they have not yet been utilised for temperature monitoring applications. Sensors can be placed away from harsh environments, and the operation of the monitoring system will not impact upon the operation of the device/component itself. Working at high frequencies can allow for fast response times and resolutions/accuracy comparable with traditional temperature sensors. The basis of developing a temperature monitoring system using ultrasonic guided waves relies on temperature having an effect on wave propagation. Any change in material properties within the propagation medium will have an effect on wave propagation. A change in temperature causes a change in Young's modulus, Poisson's ratio, and density. Young's modulus has the largest effect on wave propagation, reducing with increasing temperature, which causes a reduction in wave velocity. Density also decreases with increasing temperature, manifesting as thermal expansion, which has a relatively small effect on wave velocity. Poisson's ratio changes can have a large impact on wave propagation, but generally only occur over large temperature ranges~\cite{Abbas2020a}. As temperature change causes a change in wave velocity, time of flight measurement can be used to monitor a change in temperature. Group velocity can be calculated if the propagation distance is precisely known, which can be compared to theoretical values to measure temperature directly. This is the basis for the monitoring system described in this paper.
+
+\subsection{Potential applications of an ultrasonic temperature monitoring system}
+
+An example of a potential application for this technology is nozzle guide vanes (NGVs), which are static components located in the turbine section of jet engines that are operated at extremely high temperatures. The monitoring of these components is challenging because of their location, and the extreme temperatures and gas pressures that they are exposed to. There are a number of well established offline monitoring methods (thermal paints and thermal history sensors) that record the peak temperature of exposure during an operational cycle of a turbine, but considerably less well established methods for online monitoring during normal operation (thin film thermocouples, thermographic phosphors, and pyrometers). The offline methods are used in the design stage to verify analytical models, locating areas of the component with high temperature gradients, and ensuring that the component does not exceed temperature limits. Online methods can provide considerably more data during start-up and shut-down of the engine, as well as recording any overshoot events. Online methods can be used for health monitoring and data can be fed into active control systems. A comprehensive review of both offline and online monitoring methods, and an introduction to ultrasonic based temperature monitoring is provided by Yule \textit{et al.}~\cite{Yule2021}. 
+
+The technique could also be applied to any structure where ultrasonic waves will propagate. Batteries that are made up of a number of cells could be monitored using this method to catch a failing cell before it becomes dangerous. PCBs can contain many components that reach high temperatures, an ultrasonic temperature monitoring method could reduce the number of sensors required to sample the board, and reduce the impact of the sensors on operation. The system could be used in combination with baseline comparisons and machine learning techniques to analyse complex wave packets and detect changes in the response due to temperature.
+
+The following sections describe the development of a COMSOL model based on an experimental test setup used to monitor temperature using the propagation of ultrasonic Lamb waves. A COMSOL model has been developed to simulate guided wave propagation in an aluminium plate, where the environment can easily be adjusted to evaluate the impact on wave propagation and sensor operation. A guide to building and running the model is provided, along with validation of the model against theoretical Lamb wave temperature sensitivity extracted from dispersion curves, and experimental results from the test setup that the COMSOL model replicates.
+
+\section{Lamb wave mode targeting}
+
+The dispersive multi-modal nature of Lamb waves means that careful selection of excitation frequency is required to target wave modes that can be more easily analysed. The choice of frequency/mode also determines the temperature sensitivity. The generation of dispersion curves based on material properties aides in this process, and they can be used to validate the results of simulated or experimental measurements. The $S_0$ Lamb wave mode has been targeted at a frequency-thickness product of 1 MHz-mm (in a 1 mm plate). Theoretical dispersion curves calculated from the material properties of Aluminium have been produced using \href{https://www.dlr.de/zlp/en/desktopdefault.aspx/tabid-14332/24874_read-61142/#/gallery/33485}{The Dispersion Calculator}~\cite{Huber}. The velocities extracted from dispersion curves can be seen plotted against experimental and simulated results in Figure~\ref{fig:s0result}.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=.6\textwidth]{./figures/grouptempshiftalu.eps}
+    \caption{$A_0$, $S_0$, $A_1$, and $S_1$ group velocity dispersion curve shift with temperature from 20\si{\degreeCelsius} to 100\si{\degreeCelsius} for Aluminium 1050 H14.}\label{fig:grouptempshuftalu}
+\end{figure}
+
+Using wedge transducers allows the targeting of single Lamb wave modes with careful selection of excitation angle. The angle is determined based on Snell’s law:
+%
+\begin{equation} 
+\text{Angle}\ \theta = \text{Sin}^{- 1} \left( \frac{\text{Longitudinal\ wedge\ velocity}}{\text{Lamb\ wave\ phase\ velocity}} \right)
+\end{equation} 
+%
+The wedge angle required to excite the $S_0$ mode is:
+%
+\begin{equation} 
+31{^\circ} = \text{Sin}^{- 1} \left( \frac{2720}{5258} \right)
+\end{equation} 
+%
+The $A_0$ mode cannot be excited using this method as the phase velocity at this frequency (2312 m s$^{-1}$) is slower than the longitudinal velocity of the wedge. If the $A_0$ mode is present in the signal it will not affect measurement of the $S_0$ mode as it’s group velocity is significantly different than that of the $S_0$ mode, which will cause a distinct second wave packet. 
+
+It should be made clear, however, that the use of wedge transducers is unlikely to be the finalised transducer configuration for a permanently installed temperature monitoring system, as they rely on liquid couplants and acrylic wedges that would melt at relatively low temperatures. The use of wedges at this stage are useful for simplifying the signal processing techniques required, and targeting specific wave modes of interest. For permanent installation there are a number of options available. Piezoelectric Wafer Active Sensors (PWAS) are being used extensively for SHM applications and have been shown to withstand exposure to extreme environments~\cite{Mei2019}. They are non-resonant wide-band devices~\cite{Giurgiutiu2003a} however they can be used for generation of single Lamb wave modes with careful geometry selection~\cite{Ren2017}. PWAS are small, inexpensive, and minimally invasive~\cite{Giurgiutiu2003a}, making them potentially suitable for installation on NGVs if a suitable bonding method and piezoelectric material can be found. Another solution to this problem is to couple into the structure using wave guides and Hertzian contact points, which would allow the transducers to be placed further away from the harsh environment. This method of coupling has been used to measure the mechanical properties of carbon fibre reinforced plastics (CFRP) using measured phase velocities of the $A_0$ and $S_0$ Lamb wave modes~\cite{Grimberg2010}.
+
+The COMSOL model described in the next section is based on the experimental setup described in Section~\ref{experiments}. The experimental setup has been used to analyse the effect of temperature on wave propagation in an Aluminium plate. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{COMSOL simulation methods}
+
+The multiphysics simulation package COMSOL has been used to simulate a potential temperature monitoring system, as described experimentally in Section~\ref{experiments}. The literature covering the use of COMSOL for modelling Lamb wave excitation using wedge transducers is limited, however it has been shown that Lamb waves can be successfully generated using this method~\cite{Nikolaevtsev2016a}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{./figures/comsoldiagram.png}
+    \caption{COMSOL geometry diagram}\label{fig:COMSOLdiagram}
+\end{figure}
+
+The model consists of two variable angle wedges (PMMA), which are based on the geometry of Olympus variable angle wedges, placed on top of an aluminium plate. The thickness of the plate is set to 1 mm to target the $S_0$ mode at 1 MHz--mm. The transmitting wedge has a simplified piezoelectric transducer (PZT-5H from COMSOL's material library) attached to it's rotating block, to which the excitation signal is applied. The rotating block is set to an angle of 31\si{\degree}. The geometry can be seen in Figure \ref{fig:COMSOLdiagram}. The received signal is measured at the receiver wedge's rotating block boundary. More realistic transducer configurations are not considered in this study, as the focus is on the effect of temperature on the propagating wave. A boundary area is set underneath the plate to act as the heat source, again mimicking the experimental setup. This is simplified to allow the temperature to be directly set, rather than simulating a hot plate.
+
+\begin{table}[h]
+    \centering
+    \begin{tabulary}{\textwidth}{LLL}
+        \hline
+        \textbf{Property} & \textbf{PMMA} & \textbf{Aluminium}  \\
+        \hline
+        Heat capacity at constant pressure (J/(kg$\cdot$K)) & 1470 & 904 \\
+        Density (kg/m$^3$) & 1190 & 2700\\
+        Thermal conductivity (W/(m$\cdot$K)) & 0.18  & 237\\
+        Young's modulus (Pa) & Equation~\ref{eqn:E PMMA} & Equation~\ref{eqn:E Alu} \\
+        Poisson's ratio & 0.35 & 0.3375\\
+        \hline
+    \end{tabulary} 
+    \caption{COMSOL material properties}\label{table:matprop}
+\end{table}
+
+The change in Young's Modulus with temperature is included in the material properties for both the wedges (Equation~\ref{eqn:E PMMA})~\cite{Sahputra2018} and the aluminium (Equation~\ref{eqn:E Alu})~\cite{Hopkins2012} using piecewise functions.
+%
+\begin{equation}
+    \label{eqn:E PMMA}
+    E\left( T \right) = \ - 15250\times T^2 + 1125000\times T + 4932500000\    
+\end{equation}
+%
+\begin{equation}
+    \label{eqn:E Alu}
+    E\left( T \right) = \  - 4{\times} 10^7 \times T + 8{\times} 10^{10}\   
+\end{equation}
+%
+Where $T$ is the temperature in Kelvin. The change in Poisson's ratio and density is assumed to negligible and is not included in the simulation. Thermal expansion is also considered to have a negligible effect on the propagation distance and is excluded. The modules Solid Mechanics, Electrostatics, and Heat Transfer in Solids are used in this simulation, along with a multiphysics node to couple Solid Mechanics with Electrostatics for the piezoelectric effect. Both the wedges and the plate are set to isotropic linear elastic materials, with low reflecting boundaries applied to the wedges.
+
+The simple piezoelectric transducer for the transmitting wedge is set up as follows: A zero charge node is used for the edges of the material, initial values are set to 0 V, a ``Charge Conservation, Piezoelectric'' node is set for the material, a ground boundary is selected for the wedge side of the material, and a terminal node is set for the opposite boundary. Within the terminal node the type is set to Voltage and the input is set to V0(t). The excitation signal is a 1 MHz 5--cycle Hamming windowed sine pulse generated in MATLAB and imported into COMSOL using linear interpolation (Definitions$>$Interpolation).
+
+For the Heat Transfer in Solids module all the domains are set to solid, and initial values are set to 20\si{\degreeCelsius}. The boundaries that are exposed to the air are selected in a Heat Flux node, where convective heat flux is selected. A user defined heat transfer coefficient of 15~W/(m$^2\cdot$K) is used for the plate, and 5~W/(m$^2\cdot$K) for the wedges. These values were adjusted to produce the temperature gradients measured experimentally in both the plate and the wedges. The external temperature is set to 20\si{\degreeCelsius}. The temperature of the boundary underneath the plate is adjusted as required (20\si{\degreeCelsius} to 100\si{\degreeCelsius} in 20\si{\degreeCelsius} increments for this study). An example of the temperature gradients produced from the stationary study step are shown in Figure~\ref{fig:COMSOLtemp100c}, where the temperature boundary underneath the plate is set to 100\si{\degreeCelsius}.
+
+The mesh size for each material is determined by excitation frequency. The excitation wavelength for each of the materials is calculated by dividing their longitudinal wave speed by $f_0$. A free triangular mesh is created for each of the materials, and the maximum element size for each of them is set to LocalWavelength/N. If higher frequency content is expected, the wavelength for each material should be based on the highest frequency expected rather than $f_0$. In order to accurately resolve a wave, at least 10--12 elements per local wavelength are required~\cite{COMSOL2013}. This assumes linear discretization for all modules. Using 12 elements results in an average skewness rating (measure of element quality, 0--1) of 0.9345 over 154728 elements~\cite{COMSOL2017}. This is equivalent to a sample rate of 1.2$\times$10$^8$.
+
+This study has two steps, firstly a stationary study to simulate the effect of temperature on the system until an equilibrium is reached, and secondly a time dependant study to simulate wave propagation that has it's initial conditions set by the stationary study. The settings for the initial study are adjusted to solve for heat transfer but not solve for electrostatics/the piezoelectric effect. Changing temperature causes a change in Young's modulus, which subsequently affects wave velocity.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{./figures/comsoltemp100c.png}
+    \caption{Simulated temperature gradients from stationary study at 100\si{\degreeCelsius}.}\label{fig:COMSOLtemp100c}
+\end{figure}
+
+The time dependant study includes electrostatics/the piezoelectric effect to allow for wave generation, but does not include heat transfer. This reduces computation time as it is not necessary to model changing temperature as the time dependant model solves, only to use the fixed values of Young's modulus that have been passed on from the stationary study. The time dependant study has its ``Output times'' set to: range(0,dt,sim\textunderscore length) where ``dt'' is a global definition parameter equal to CFL/(N$\times f_0$). The CFL (Courant Friedrichs Lewy) number is suggested by COMSOL~\cite{COMSOL2021} to be less than 0.2, optimally 0.1 (when the default second order, quadratic, mesh elements are used). This value represents the relationship between wave speed, $c$, maximum mesh size, $h$, and time step length, $\Delta t$: $CFL = c\Delta t/h$. This can be rewritten in terms of frequency as the maximum mesh size $h$ has already been manually defined by $N$, the number of elements per local wavelength for each material: $CFL = fN\Delta t$. This can then be rearranged to give the time step: $\Delta t = CFL/Nf$. 
+
+Under ``Values of Dependant Variables'' the settings are changed to user controlled, method is changed to Solution, and the study is set to the stationary study. The time step is manually set under Solver Configurations$>$Solution 1$>$Time dependant solver$>$Time stepping. Here the ``Steps taken by solver'' parameter is changed to ``Manual'' and the ``Time Step'' is set to: $CFL/(N\times f_0)$. 
+
+To reduce file size only the data at the wedge boundaries is stored by the solver. This can be achieved by adding an ``Explicit Selection'' node in the Geometry section, and selecting both the transmit and receive wedge boundaries. Within the time dependant study settings select ``For selection'' under ``Store fields in output'' and select the boundary group~\cite{COMSOL2021a}. 
+
+A parametric sweep node was used to cycle through the temperature boundary values (20\si{\degreeCelsius} to 100\si{\degreeCelsius} in 20\si{\degreeCelsius} increments) and save the output of the time dependant model for each value. This is repeated for the model in the wedge-to-wedge configuration (mimicking the experimental setup shown in Figure~\ref{fig:testdiagramw2w}). The simulations were run on the University of Southampton's IRIDIS 5 supercomputing platform~\cite{Southampton2021}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{COMSOL simulation results}\label{comsolresults}
+
+Exaggerated deformation of pressure in the plate as seen in Figure~\ref{fig:simmodes} makes the presence of the $A_0$ and $S_0$ modes clearly visible. The modes are separated in the time domain after a short distance ($\sim$~50 mm) due to the difference in group velocity. 
+
+To visualise wave propagation and calculate time of flight the pressure at both transmitter and receiver wedge boundaries are exported, and the time of flight is measured using an envelope peak extraction method, to allow direct comparison with experimental results. This method of time of flight measurement can also be applied to more dispersive signals, which cannot be achieved using cross correlation methods. Various signal processing techniques for time of flight measurement are discussed in detail by Guers~\cite{Guers2011}. An example of wave propagation at room temperature can be seen in Figure~\ref{fig:COMSOLsimsignal}. 
+
+Calculated total time of flight (through both the wedges and the plate) is marginally longer than experimentally measured time of flight, which can be attributed to a number of factors. Differences in material properties, their change with temperature, variance in geometry, wedge angle, wedge spacing, and sample rate, all have an impact on time of flight. Wedge foot offset (the distance a wave travel under each wedge foot) is calculated in the same way for both the simulation and the experiments, however the value differs, which indicates a difference in geometry between them. Despite this difference the difference in calculated velocities is small, as using accurate estimations of wedge foot offset corrects for the difference in total time of flight. Time of flight in the wedge-to-wedge configuration is in line with experimental measurements, which suggests that the geometry and material properties of the wedges are realistic. The material properties of the aluminium plate are the same as those used in the theoretical study, which should (in theory) mean that the velocity in the simulated plate is the same as was extracted from dispersion curves. Frequency analysis of the transmitted wave shows that it is still centred at 1 MHz as expected. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{./figures/simmodes.png}
+    \caption{Presence of the $A_0$ \& $S_0$ modes.}\label{fig:simmodes}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{./figures/simpulse20csensors.eps}
+    \caption{COMSOL simulation of $S_0$ mode propagation at room temperature.}\label{fig:COMSOLsimsignal}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experimental set up}\label{experiments}
+
+Two 1 MHz piezoelectric transducers attached to acrylic wedges (Olympus variable angle wedge) in a pitch-catch configuration have been coupled to a 1~mm thick aluminium plate with a liquid couplant (Figure~\ref{fig:testsetup}). A signal generator (GW Instek MFG-2203M) has been used to generate a 5-cycle Hamming windowed tone burst at 1~MHz. Signals are digitised using a Picoscope 3406DMSO USB Oscilloscope. Based on a sampling rate of 5$\times$10$^8$ the theoretical maximum temporal resolution is 2~ns. Signal processing is carried out in MATLAB. A zero-phase bandpass filter is applied to the signals to remove unwanted noise. Time of flight ($t_F$) is measured between transducers and wave velocity is calculated from the distance between transducers. The temperature of the aluminium plate is controlled using a hot plate.
+
+\begin{table}[h]
+    \centering
+    \begin{tabulary}{\textwidth}{L}
+        \hline
+        \textbf{Measurement Hardware}     \\
+        \hline
+        2x Olympus ABWX-2001 Variable angle wedges \\
+        2x Olympus A539S-SM 1 MHz transducers \\
+        Olympus ultrasonic couplant B \\
+        GW Instek MFG-2203M Signal generator \\
+        Picoscope 3406DMSO USB Oscilloscope \\
+        Thermadata T-type temperature loggers \\
+        VWR Hot plate \\
+        \hline
+    \end{tabulary} 
+    \caption{Experimental measurement hardware.}\label{table:hardware}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.6\textwidth]{./figures/testdiagramsimple.eps}
+    \caption{Cross-sectional diagram of total time-of-flight measurement setup.}\label{fig:testdiagramtotal}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\textwidth]{./figures/w2wdiagram.eps}
+    \caption{Cross-sectional diagram of wedge-to-wedge time-of-flight measurement setup.}\label{fig:testdiagramw2w}
+\end{figure}
+
+The hot plate is used to raise the temperature of the aluminium plate to the desired temperature. The temperature of the aluminium plate is monitored using a thermocouple placed in the centre of the plate at the hottest point. The total $t_F$ is measured until it stabilises using the test setup shown in Figure~\ref{fig:testdiagramtotal}. The temperature of the entire system must be allowed to stabilise before taking the measurement to ensure that the temperature of the wedge is the same as the plate. Total $t_F$ is now measured for the set temperature. Multiple measurements are taken after adjusting both wedge positions. The wedges are removed from the surface and placed together to measure the wedge-to-wedge $t_F$ as shown in Figure~\ref{fig:testdiagramw2w}. Multiple measurements are taken after adjusting wedge-to-wedge position. The $t_F$ measurement process is repeated after allowing the total $t_F$ to re-stabilise. Velocity is calculated using Equation~\ref{velocitycalcfull}. A mean average is calculated from the results of the repeated total $t_F$ measurements, and velocity is calculated for every wedge-to-wedge result. An average velocity is calculated along with standard deviation. 
+
+The temperature gradient across the plate has been measured by placing four equally spaced thermocouples along the transmission path, from the centre of the plate to the furthest edge of a wedge transducer in 3 cm increments. The wedges are removed from the plate to place the thermocouples, and the temperature of the hot plate is raised to match the temperature recorded by the thermocouple placed in the centre of the plate during measurement of total $t_F$. Measurements are repeated after moving the thermocouples to the other half of the transmission path. A mean average temperature has been calculated for the total transmission path at each hot plate temperature setting. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.6\textwidth]{./figures/hjkhh7UmEx.png}
+    \caption{Photograph of test setup.}\label{fig:testsetup}
+\end{figure}
+
+\section{Velocity calculation}
+
+Calculation of wave velocity depends on measurement of time of flight ($t_F$), which can be described by the Equation~\cite{Croxford2007a}:
+%
+\begin{equation}\label{tofcalc}
+t_F = \frac{d}{c}
+\end{equation} 
+%
+Where $d$ is the distance travelled at wave speed $c$, both of which are functions of temperature, $T$. The sensitivity of the time of flight to temperature can then be expressed as:
+%
+\begin{equation} 
+\delta t_{F} = \frac{d}{c}\left( \alpha - \frac{k}{c} \right) \delta \text{T}
+\end{equation} 
+%
+Where $\alpha$ is the coefficient of thermal expansion of the medium and $k$ is the rate of change of wave velocity with temperature:
+%
+\begin{equation} {\label{eqn: eq k}}
+k = \frac{\delta \text{c}}{\delta \text{T}}
+\end{equation} 
+%
+The time of flight measurements from both the COMSOL model and the experimental setup are both processed in the same way (as described in Section~\ref{comsolresults}) to calculate group velocity, using Equation~\ref{velocitycalc}/\ref{velocitycalcfull}. The propagation time through the wedges (measured using the configuration shown in Figure~\ref{fig:testdiagramw2w}) has been subtracted from the total $t_F$ to ensure that only the propagation time through the plate is measured.  
+%
+\begin{equation} \label{velocitycalc}
+v = \frac{d}{t_F}
+\end{equation} 
+%
+\begin{equation} \label{velocitycalcfull}
+v = \left( \frac{d\;\text{between wedges} + d\;\text{wedge foot offset}}{\text{Total}\;t_F - \text{Wedge-to-wedge}\;t_F} \right)
+\end{equation} 
+%
+\\
+Where the $d$ wedge foot offset is an unknown distance from the front edge of the wedge to where the wave enters the plate from the wedge. For the experimental setup this distance has been calculated by measuring wave velocity at room temperature at multiple wedge spacings (0.08 m to 0.14 m in 0.01 m increments) and looping through a range of plausible offset distances until the standard deviation across the range of wedge spacings is at a minimum. This ensures that the variation in measurement results is due to measurement error (e.g. small variances in setting the distance between wedges) rather than an incorrect estimation of wedge foot offset. For COMSOL this offset value was determined by using wedge spacings of 0.075 m, 0.1 m, and 0.125 m.  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}
+
+Figure~\ref{fig:s0result} shows the change in velocity with temperature for the $S_0$ Lamb wave mode in Aluminium, comparing theoretical temperature sensitivity extracted from dispersion curves, experimental measurement data, and COMSOL simulations of the experimental setup. The results from the COMSOL model are in good agreement with those taken experimentally, which also match up well to the theoretical temperature sensitivity of Aluminium extracted from dispersion curves. The experimental result is within 4.89 $\pm$ 2.27 m s$^{-1}$ or 0.05\% of the theoretical velocity on average. The COMSOL results are within 3.25 m s$^{-1}$ or 0.02\% of the theoretical result on average.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.6\textwidth]{./figures/s0andcomsolresult.eps}
+    \caption{Velocity change with temperature for $S_0$ Lamb wave mode in Aluminium. Comparison between theoretical, experimental, and simulated results.}\label{fig:s0result}
+\end{figure}
+
+\section{Conclusions}
+
+This initial study shows the potential of a Lamb wave based temperature monitoring system. Validating the COMSOL model against experimental and theoretical results now allows the model to be used to investigate, for example, the use of alternative transducer configurations, substrate materials and geometries, or the targeting of other Lamb wave modes.
+
+In order to apply this technology to nozzle guide vanes a number of challenges need to be addressed. Curved surfaces, surface coatings, and cooling holes, will all have an effect on wave propagation, which can be investigated using the COMSOL model. The reflections produced by cooling holes may enable temperature to be monitored at a number of different locations across the surface of the vane, which is highly advantageous for identifying temperature gradients and hotspots. Different Lamb wave modes can be targeted to determine the most suitable area of the frequency-thickness spectrum for temperature monitoring applications. For permanent installation and operation at higher temperatures an alternative transducer configuration is required. PWAS sensors, or the use of waveguides to distance the transducers from the harsh environment of a turbine, can be tested using an adapted version of the COMSOL model.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{6pt} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% optional
+%\supplementary{The following are available online at \linksupplementary{s1}, Figure S1: title, Table S1: title, Video S1: title.}
+
+% Only for the journal Methods and Protocols:
+% If you wish to submit a video article, please do so with any other supplementary material.
+% \supplementary{The following are available at \linksupplementary{s1}, Figure S1: title, Table S1: title, Video S1: title. A supporting video article is available at doi: link.} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\authorcontributions{Conceptualization, methodology, software development, validation, data collection, analysis, writing: Lawrence Yule. Conceptualization, supervision, draft preparation, review, and editing: Bahareh Zaghari, Nicholas Harris, and Martyn Hill. All authors have read and agreed to the published version of the manuscript.}
+
+\funding{This work was supported by Lloyds Register Foundation International Consortium of Nanotechnology, University of Southampton DTP fund, and the support of the EPSRC under grant EP/S005463/1 (Better FITT Early detection of contact distress for enhanced performance monitoring and predictive inspection of machines.)}
+
+\dataavailability{The data presented in this study are openly available in University of Southampton Institutional Research Repository, ePrints Soton, at \href{https://doi.org/10.5258/SOTON/D1963}{DOI 10.5258/SOTON/D1963}.} 
+
+\acknowledgments{The authors acknowledge the use of the IRIDIS High Performance Computing Facility, and associated support services at the University of Southampton, in the completion of this work.}
+
+\conflictsofinterest{The authors declare no conflict of interest.} 
+
+%% Optional
+%\sampleavailability{Samples of the compounds ... are available from the authors.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Only for journal Encyclopedia
+%\entrylink{The Link to this entry published on the encyclopedia platform.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional
+\abbreviations{The following abbreviations are used in this manuscript:\\
+
+\noindent 
+\begin{tabular}{@{}ll}
+NDE & Non-destructive evaluation\\
+SHM & Structural health monitoring\\
+NGV & Nozzle guide vane\\
+ToF & Time of flight\\
+CFL & Courant Friedrichs Lewy number\\
+BAW & Bulk acoustic wave\\
+SAW & Surface acoustic wave\\
+PWAS & Piezoelectric wafer active sensors
+\end{tabular}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional
+% \appendixtitles{no} % Leave argument "no" if all appendix headings stay EMPTY (then no dot is printed after "Appendix A"). If the appendix sections contain a heading then change the argument to "yes".
+% \appendixstart
+% \appendix
+% \section{}
+% \subsection{}
+% The appendix is an optional section that can contain details and data supplemental to the main text---for example, explanations of experimental details that would disrupt the flow of the main text but nonetheless remain crucial to understanding and reproducing the research shown; figures of replicates for experiments of which representative data are shown in the main text can be added here if brief, or as Supplementary Data. Mathematical proofs of results not central to the paper can be added as an appendix.
+% \cite{Alleyne1992}
+% \begin{specialtable}[H] 
+% %\tablesize{\scriptsize}
+% \caption{This is a table caption. Tables should be placed in the main text near to the first time they are~cited.}
+% %\tablesize{} % You can specify the fontsize here, e.g., \tablesize{\footnotesize}. If commented out \small will be used.
+% \begin{tabular}{ccc}
+% \toprule
+% \textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}\\
+% \midrule
+% Entry 1		& Data			& Data\\
+% Entry 2		& Data			& Data\\
+% \bottomrule
+% \end{tabular}
+% \end{specialtable}
+
+% \section{}
+% All appendix sections must be cited in the main text. In the appendices, Figures, Tables, etc. should be labeled, starting with ``A''---e.g., Figure A1, Figure A2, etc. 
+% fhfg
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{paracol}
+\reftitle{References}
+
+% Please provide either the correct journal abbreviation (e.g. according to the “List of Title Word Abbreviations” http://www.issn.org/services/online-services/access-to-the-ltwa/) or the full name of the journal.
+% Citations and References in Supplementary files are permitted provided that they also appear in the reference list here. 
+
+%=====================================
+% References, variant A: external bibliography
+%=====================================
+
+
+%=====================================
+% References, variant B: internal bibliography
+%=====================================
+
+\externalbibliography{yes}
+\bibliography{library.bib, References.bib}
+
+% If authors have biography, please use the format below
+%\section*{Short Biography of Authors}
+%\bio
+%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author1.pdf}}}
+%{\textbf{Firstname Lastname} Biography of first author}
+%
+%\bio
+%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author2.jpg}}}
+%{\textbf{Firstname Lastname} Biography of second author}
+
+% The following MDPI journals use author-date citation: Arts, Econometrics, Economies, Genealogy, Humanities, IJFS, JRFM, Laws, Religions, Risks, Social Sciences. For those journals, please follow the formatting guidelines on http://www.mdpi.com/authors/references
+% To cite two works by the same author: \citeauthor{ref-journal-1a} (\citeyear{ref-journal-1a}, \citeyear{ref-journal-1b}). This produces: Whittaker (1967, 1975)
+% To cite two works by the same author with specific pages: \citeauthor{ref-journal-3a} (\citeyear{ref-journal-3a}, p. 328; \citeyear{ref-journal-3b}, p.475). This produces: Wong (1999, p. 328; 2000, p. 475)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% for journal Sci
+%\reviewreports{\\
+%Reviewer 1 comments and authors’ response\\
+%Reviewer 2 comments and authors’ response\\
+%Reviewer 3 comments and authors’ response
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+
