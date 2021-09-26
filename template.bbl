@@ -1,11 +1,28 @@
 \begin{thebibliography}{999}
 
-\bibitem[Mitra and Gopalakrishnan(2016)]{Mitra2016}
-Mitra, M.; Gopalakrishnan, S.
-\newblock {Guided wave based structural health monitoring: A review}.
-\newblock {\em Smart Mater. Struct.} {\bf 2016}, {\em 25}.
+\bibitem[Zaghari \em{et~al.}(2013)Zaghari, Humphrey, and
+  Moshrefi-Torbati]{Zaghari2013}
+Zaghari, B.; Humphrey, V.; Moshrefi-Torbati, M.
+\newblock {Dispersion behavior of torsional guided waves in a small diameter
+  steel gas pipe}.
+\newblock {\em ICAC 2013 - Proc. 19th Int. Conf. Autom. Comput. Futur. Energy
+  Autom.} {\bf 2013}, {\em 1},~37--42.
+
+\bibitem[Shi \em{et~al.}(2019)Shi, Zhuang, Xu, Yu, and Zhu]{Shi2019}
+Shi, H.; Zhuang, L.; Xu, X.; Yu, Z.; Zhu, L.
+\newblock {An ultrasonic guided wave mode selection and excitation method in
+  rail defect detection}.
+\newblock {\em Appl. Sci.} {\bf 2019}, {\em 9}.
 \newblock
-  doi:{\changeurlcolor{black}\href{https://doi.org/10.1088/0964-1726/25/5/053001}{\detokenize{10.1088/0964-1726/25/5/053001}}}.
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.3390/app9061170}{\detokenize{10.3390/app9061170}}}.
+
+\bibitem[Wang \em{et~al.}(2019)Wang, Qiu, Luo, and Ding]{Wang2019}
+Wang, Y.; Qiu, L.; Luo, Y.; Ding, R.
+\newblock {A stretchable and large-scale guided wave sensor network for
+  aircraft smart skin of structural health monitoring}.
+\newblock {\em Struct. Heal. Monit.} {\bf 2019}.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1177/1475921719850641}{\detokenize{10.1177/1475921719850641}}}.
 
 \bibitem[Fatemi(1980)]{Fatemi1980}
 Fatemi, M.
@@ -42,12 +59,26 @@ Komura, I.; Hirasawa, T.; Nagai, S.
 \newblock
   doi:{\changeurlcolor{black}\href{https://doi.org/10.1007/s11003-011-9382-9}{\detokenize{10.1007/s11003-011-9382-9}}}.
 
-\bibitem[Dransfeld and Salzmann(1970)]{Dransfeld1970}
-Dransfeld, K.; Salzmann, E.
-\newblock {\em {Excitation, Detection, and Attenuation of High-Frequency
-  Elastic Surface Waves}}; Vol.~7, ACADEMIC PRESS, INC.,  1970; pp. 219--272.
+\bibitem[{Pereira Da Cunha} \em{et~al.}(2011){Pereira Da Cunha}, Lad,
+  Moonlight, Moulzolf, Canabal, Behanan, Davulis, Frankel, Bernhardt, Pollard,
+  and McCann]{PereiraDaCunha2011}
+{Pereira Da Cunha}, M.; Lad, R.J.; Moonlight, T.; Moulzolf, S.; Canabal, A.;
+  Behanan, R.; Davulis, P.M.; Frankel, D.; Bernhardt, G.; Pollard, T.; McCann,
+  D.F.
+\newblock {Recent advances in harsh environment acoustic wave sensors for
+  contemporary applications}.
+\newblock {\em Proc. IEEE Sensors} {\bf 2011}, pp. 614--617.
 \newblock
-  doi:{\changeurlcolor{black}\href{https://doi.org/10.1016/B978-0-12-395667-5.50010-6}{\detokenize{10.1016/B978-0-12-395667-5.50010-6}}}.
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1109/ICSENS.2011.6126948}{\detokenize{10.1109/ICSENS.2011.6126948}}}.
+
+\bibitem[Dong \em{et~al.}(2019)Dong, Ji, Huang, Zhou, Li, Fan, and
+  Xu]{Dong2019}
+Dong, W.; Ji, X.; Huang, J.; Zhou, T.; Li, T.; Fan, Y.; Xu, K.
+\newblock {Sensitivity enhanced temperature sensor: One-port 2D surface
+  phononic crystal resonator based on AlN/sapphire}.
+\newblock {\em Semicond. Sci. Technol.} {\bf 2019}, {\em 34}.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1088/1361-6641/ab0a82}{\detokenize{10.1088/1361-6641/ab0a82}}}.
 
 \bibitem[Rose(2014)]{Rose2014}
 Rose, J.L.
@@ -55,30 +86,6 @@ Rose, J.L.
   Cambridge University Press,  2014; pp. 1--512.
 \newblock
   doi:{\changeurlcolor{black}\href{https://doi.org/10.1017/CBO9781107273610}{\detokenize{10.1017/CBO9781107273610}}}.
-
-\bibitem[Zaghari \em{et~al.}(2013)Zaghari, Humphrey, and
-  Moshrefi-Torbati]{Zaghari2013}
-Zaghari, B.; Humphrey, V.; Moshrefi-Torbati, M.
-\newblock {Dispersion behavior of torsional guided waves in a small diameter
-  steel gas pipe}.
-\newblock {\em ICAC 2013 - Proc. 19th Int. Conf. Autom. Comput. Futur. Energy
-  Autom.} {\bf 2013}, {\em 1},~37--42.
-
-\bibitem[Shi \em{et~al.}(2019)Shi, Zhuang, Xu, Yu, and Zhu]{Shi2019}
-Shi, H.; Zhuang, L.; Xu, X.; Yu, Z.; Zhu, L.
-\newblock {An ultrasonic guided wave mode selection and excitation method in
-  rail defect detection}.
-\newblock {\em Appl. Sci.} {\bf 2019}, {\em 9}.
-\newblock
-  doi:{\changeurlcolor{black}\href{https://doi.org/10.3390/app9061170}{\detokenize{10.3390/app9061170}}}.
-
-\bibitem[Wang \em{et~al.}(2019)Wang, Qiu, Luo, and Ding]{Wang2019}
-Wang, Y.; Qiu, L.; Luo, Y.; Ding, R.
-\newblock {A stretchable and large-scale guided wave sensor network for
-  aircraft smart skin of structural health monitoring}.
-\newblock {\em Struct. Heal. Monit.} {\bf 2019}.
-\newblock
-  doi:{\changeurlcolor{black}\href{https://doi.org/10.1177/1475921719850641}{\detokenize{10.1177/1475921719850641}}}.
 
 \bibitem[Su and Ye(2009)]{Su2009a}
 Su, Z.; Ye, L.
@@ -209,6 +216,14 @@ Guers, M.J.
 \newblock {IN-SITU MONITORING OF REMOTE SPECIMENS USING ULTRASONIC GUIDED
   WAVES}.
 \newblock Phd thesis, Pennsylvania State University,  2011.
+
+\bibitem[Yule \em{et~al.}(2021)Yule, Zaghari, Harris, and Hill]{Yule2021a}
+Yule, L.; Zaghari, B.; Harris, N.R.; Hill, M.
+\newblock {Towards in-flight temperature monitoring for nozzle guide vanes
+  using ultrasonic guided waves}.
+\newblock  AIAA Propuls. Energy 2021 Forum,  2021.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/https://doi.org/10.2514/6.2021-3475}{\detokenize{https://doi.org/10.2514/6.2021-3475}}}.
 
 \bibitem[Croxford \em{et~al.}(2007)Croxford, Wilcox, Drinkwater, and
   Konstantinidis]{Croxford2007a}
